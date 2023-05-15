@@ -1,40 +1,19 @@
 var total_num = 0;
 var total_price = 0;
-
 function start_btn() {
     document.getElementById("kiosk_start_img").style.display = 'none';
     document.getElementById("kiosk_start_btn").style.display = 'none';
     document.getElementById("세트").style.display = 'none';
     document.getElementById("사이드").style.display = 'none';
     document.getElementById("음료&디저트").style.display = 'none';
-    
+    document.getElementById("버거&와퍼2").style.display = 'none';
+    document.getElementById("세트2").style.display = 'none';
+    document.getElementById("음료&디저트2").style.display = 'none';
     document.getElementById("kiosk_order").style.display = 'block';
     document.getElementById("kiosk_menu_table").style.display = 'block';
     document.getElementById("nextpage").style.display = 'flex';
     document.getElementById("pay").style.display = 'flex';
     hide_order_list();
-}
-
-function start_btn2() {
-    document.getElementById("kiosk_start_img").style.display = 'none';
-    document.getElementById("kiosk_start_btn").style.display = 'none';
-    document.getElementById("subpage").style.display = 'block';
-    document.getElementById("homebtn").style.display = 'block';
-    document.getElementById("title wrapper").style.display = 'block';
-    document.getElementById("menu wrapper").style.display = 'block';
-}
-
-window.onload = function () { 
-    document.getElementById("세트").style.display = 'none';
-    document.getElementById("사이드").style.display = 'none';
-    document.getElementById("음료&디저트").style.display = 'none';
-    for (i = 1; i < 8; i++) {
-        
-        var plus_id = "plus_" + (i);
-        document.getElementById(plus_id).style.display = 'none';
-        var minus_id = "minus_" + (i);
-        document.getElementById(minus_id).style.display = 'none';
-    } 
 }
 
 function hide_order_list() {
@@ -43,6 +22,7 @@ function hide_order_list() {
         list[i].style.display = 'none';
     }
 }
+
 
 var menu_list = ["버거&와퍼"];
 function open_menu_table(id) {
@@ -58,65 +38,49 @@ function all_menu_none() {
     document.getElementById("세트").style.display = 'none';
     document.getElementById("사이드").style.display = 'none';
     document.getElementById("음료&디저트").style.display = 'none';
-
+    document.getElementById("버거&와퍼2").style.display = 'none';
+    document.getElementById("세트2").style.display = 'none';
+    document.getElementById("음료&디저트2").style.display = 'none';
 }
+
 var menu_bar_page = 1;
-/*
-function turn_menu_page(btn) {
+
+
+function turn_menu_page_burger(btn) {
     var current_page_id = "kiosk_menu_";
-    if (btn == "menu_bar_right") {
-        if (menu_bar_page != 3) {
-            var past = document.getElementsByClassName(current_page_id + menu_bar_page);
-            past[0].style.display = 'none';
-            past[1].style.display = 'none';
-            past[2].style.display = 'none';
-            past[3].style.display = 'none';
-            menu_bar_page += 1;
-            if(menu_bar_page == 3) {
-                all_menu_none();
-                document.getElementById("Beverage").style.display = 'block';
-            }
-            if(menu_bar_page == 2) {
-                all_menu_none();
-                document.getElementById("스무디_프라페").style.display = 'block';
-            }
-
-        }
-        var now = document.getElementsByClassName(current_page_id + menu_bar_page);
-        now[0].style.display = 'block';
-        now[1].style.display = 'block';
-        now[2].style.display = 'block';
-        now[3].style.display = 'block';
-
-
+    if (btn == "right_btn") {
+        document.getElementById("버거&와퍼").style.display = 'none';
+        document.getElementById("버거&와퍼2").style.display = 'block';
     }
-
-    if (btn == "menu_bar_left") {
-        if (menu_bar_page != 1) {
-            var past = document.getElementsByClassName(current_page_id + menu_bar_page);
-            past[0].style.display = 'none';
-            past[1].style.display = 'none';
-            past[2].style.display = 'none';
-            past[3].style.display = 'none';
-            menu_bar_page -= 1;
-            if(menu_bar_page == 2) {
-                all_menu_none();
-                document.getElementById("커피_콜드브루").style.display = 'block';
-            }
-            if(menu_bar_page == 1) {
-                all_menu_none();
-                document.getElementById("커피_ICE").style.display = 'block';
-            }
-        }
-        var now = document.getElementsByClassName(current_page_id + menu_bar_page);
-        now[0].style.display = 'block';
-        now[1].style.display = 'block';
-        now[2].style.display = 'block';
-        now[3].style.display = 'block';
+    if (btn == "left_btn") {
+        document.getElementById("버거&와퍼2").style.display = 'none';
+        document.getElementById("버거&와퍼").style.display = 'block';
     }
-
 }
-*/
+
+function turn_menu_page_set(btn) {
+    var current_page_id = "kiosk_menu_";
+    if (btn == "right_btn") {
+        document.getElementById("세트").style.display = 'none';
+        document.getElementById("세트2").style.display = 'block';
+    }
+    if (btn == "left_btn") {
+        document.getElementById("세트2").style.display = 'none';
+        document.getElementById("세트").style.display = 'block';
+    }
+}
+
+function turn_menu_page_bd(btn) {
+    var current_page_id = "kiosk_menu_";
+    if (btn == "right_btn") {
+        document.getElementById("음료&디저트").style.display = 'none';
+        document.getElementById("음료&디저트2").style.display = 'block';
+    }
+    if (btn == "left_btn") {
+        document.getElementById("음료&디저트2").style.display = 'none';
+        document.getElementById("음료&디저트").style.display = 'block';
+    }
+}
 
 function Item(name, price) {
     this.name = name;
@@ -139,10 +103,7 @@ function option(id, type, price) {
 
     var order = new Item(id, price);
     order.number++;
-    var plus_id = "plus_" + (1);
-    document.getElementById(plus_id).style.display = 'flex';
-    var minus_id = "minus_" + (1);
-    document.getElementById(minus_id).style.display = 'flex';
+    
 
     var cnt = 0;
     for (i = 0; i < order_list.length; i++) {
@@ -150,10 +111,6 @@ function option(id, type, price) {
             order_list[i].number = 1;
             cnt++;
         }
-        var plus_id = "plus_" + (i+2);
-        document.getElementById(plus_id).style.display = 'flex';
-        var minus_id = "minus_" + (i+2);
-        document.getElementById(minus_id).style.display = 'flex';
     }
 
     if (cnt == 0 || order_list.length == 0) {
@@ -168,13 +125,12 @@ function option(id, type, price) {
 function plus(j) {
  //   var total_num = 0;
  //   var total_price = 0;
+
     for (i = 0; i < order_list.length; i++) {
         if (i == j) {
             var order_id = "order_" + (i + 1);
             document.getElementById(order_id).style.display = 'flex';
-            
             order_list[i].number++;
-            
             document.getElementById("range_" + (i + 1)).innerText = (i + 1) + ". " + (order_list[i].name);
             document.getElementById("amount_" + (i + 1)).innerText = (order_list[i].number) + "개";
             document.getElementById("item_price_" + (i + 1)).innerText = (order_list[i].price) * (order_list[i].number) + "원";
@@ -354,57 +310,26 @@ function back_2_window_btn() {
     document.getElementById("카드결제").style.display = 'none';
 }
 
-function make_array() {
-    var arr = [];
-
-    for (i = 0; i < 2 * order_list.length; i=i+2){
-        arr[i] = order_list[i/2].name;
-        arr[i + 1] = order_list[i/2].number;
-    }
-    //console.log(arr);
-    return arr;
-}
-
-// order_list 다 섞어버려서 1차원배열로 만들기
 function open_w_카드결제() {
-    console.log(order_list[0].name);
-    var arr = make_array();
-    console.log(arr);
-    
-        fetch("http://52.79.219.108:5000/", {
-            method: "post",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify({
-                //menu: order_list[i].name, 
-                //num: order_list[i].number,
-                order: arr
-            }),
-        })
-            .then((response) => response.json())
-            .then((data) => console.log(data));
- 
     document.getElementById("w_카드결제").style.display = 'block';
     document.getElementById("window_pay").style.display = 'none';
     document.getElementById("w_카드결제_total_price").innerText = total_list[1]+"원";
 
-    //document.getElementById("insert_card_moving").style.display='block'; 
+    document.getElementById("insert_card_moving").style.display='block'; 
 }
 
 function close_w_카드결제() {
     document.getElementById("w_카드결제").style.display = 'none';
     document.getElementById("screen_to_window_pay").style.display = 'none';
-    //document.getElementById("insert_card_moving").style.display = 'none';
+    document.getElementById("insert_card_moving").style.display = 'none';
 
 }
-
 
 function 결제완료() {
     alert("감사합니다. 결제가 완료되었습니다. 교환권과 카드를 챙겨가세요.");
-    location.href = "okiosk.html";
+    location.href = "okiosk_senior.html";
 }
 
 function herf_home() {
-    location.href = "okiosk.html";
+    location.href = "okiosk_senior.html";
 }

@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Home_senior.css">
     <link rel="stylesheet" href="okiosk_menu.css">
     <title>오키오스크</title>
 </head>
 
 <body>
-    <script src="main.js"></script>
+    <script src="main_senior.js"></script>
             <div id= "kiosk_size" class="kiosk_screen" >
-                <!-- <div id="kiosk_start_img">
+                <div id="kiosk_start_img">
                     <button id="kiosk_start_btn" onclick="start_btn()"></button>
-                </div> -->
-                
+                </div>
+
 
                 <div id="kiosk_order">
                     <div id="top_bar">
@@ -25,8 +25,7 @@
                     </div>      
 
                     <div id="kiosk_menu_bar">
-                        <div class="kiosk_menu_1"  title="버거&와퍼" 
-                         onclick="open_menu_table(this.title)">버거&amp;와퍼</div>
+                        <div class="kiosk_menu_1"  title="버거&와퍼" onclick="open_menu_table(this.title)">버거&amp;와퍼</div>
                         <div class="kiosk_menu_1"  title="세트" onclick="open_menu_table(this.title)">세트</div>
                         <div class="kiosk_menu_1" title="사이드" onclick="open_menu_table(this.title)">사이드</div>
                         <div class="kiosk_menu_1" title="음료&디저트" onclick="open_menu_table(this.title)">음료&amp;디저트</div>
@@ -35,10 +34,11 @@
 
 
                 <div id="kiosk_menu_table">
-                    <div id="right_btn">></div>
-                    <div id="left_btn">&#60;</div>
+                    
 
                     <div id="버거&와퍼">
+                        <div id="right_btn" onclick="turn_menu_page_burger(id)">></div>
+                        <div id="left_btn" onclick="turn_menu_page_burger(id)">&#60;</div>
                         <div id="row">
                             <div id="몬스터와퍼" title="whopper" data-price="9300"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
@@ -46,22 +46,30 @@
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="스태커2와퍼" title="whopper" data-price="9500"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
-                            <div id="스태커3와퍼" title="whopper" data-price="11500"
-                                onclick="option(this.id, this.title, this.dataset.price)"></div>
                         </div>
                         <div id="row">
+                            <div id="스태커3와퍼" title="whopper" data-price="11500"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="갈릭불고기와퍼" title="whopper" data-price="7300"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="할라피뇨와퍼" title="whopper" data-price="7700"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                        <div id="row">
                             <div id="치즈와퍼" title="whopper" data-price="7500"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="와퍼" title="whopper" data-price="6900"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
-                        </div>
-                        <div id="row">
                             <div id="불고기와퍼" title="whopper" data-price="6900"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                    </div>
+
+
+                    <div id="버거&와퍼2">
+                        <div id="right_btn" onclick="turn_menu_page_burger(id)">></div>
+                        <div id="left_btn" onclick="turn_menu_page_burger(id)">&#60;</div>
+                        <div id="row">
                             <div id="통새우와퍼" title="whopper" data-price="7700"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="불고기버거" title="burger" data-price="4600"
@@ -76,8 +84,12 @@
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                         </div>
                     </div>
+
                     
+
                     <div id="세트">
+                        <div id="right_btn" onclick="turn_menu_page_set(id)">></div>
+                        <div id="left_btn" onclick="turn_menu_page_set(id)">&#60;</div>
                         <div id="row">
                             <div id="몬스터와퍼세트" title="set" data-price="10300" 
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
@@ -85,22 +97,30 @@
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>                          
                             <div id="스태커2와퍼세트" title="set" data-price="11500" 
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
-                            <div id="스태커3와퍼세트" title="set" data-price="13500" 
-                                onclick="option(this.id, this.title, this.dataset.price)"></div>
                          </div>
                         <div id="row">
+                            <div id="스태커3와퍼세트" title="set" data-price="13500" 
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="갈릭불고기와퍼세트" title="set" data-price="9300" 
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="할라피뇨와퍼세트" title="set" data-price="8300" 
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                        <div id="row">
                             <div id="치즈와퍼세트" title="set" data-price="9500" 
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="와퍼세트" title="set" data-price="8900" 
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
-                        </div>
-                        <div id="row">
                             <div id="불고기와퍼세트" title="set" data-price="8900" 
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                    </div>
+
+
+                    <div id="세트2">
+                        <div id="right_btn" onclick="turn_menu_page_set(id)">></div>
+                        <div id="left_btn" onclick="turn_menu_page_set(id)">&#60;</div>
+                        <div id="row">
                             <div id="통새우와퍼세트" title="set" data-price="9700" 
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="불고기버거세트" title="set" data-price="7800" 
@@ -114,29 +134,34 @@
                             <div id="치즈버거세트" title="set" data-price="5400" 
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                         </div>
-                    </div>
+                    </div>    
+
+
 
                     <div id="사이드">
                         <div id="row">
                             <div id="너겟킹" title="side" data-price="2800"
-                                onclick="option(this.id, this.title, this.dataset.price)" onclick='btnDisabled()'>
-                            </div>
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="치즈스틱" title="side" data-price="2000"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="어니언링" title="side" data-price="2300"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
-                            <div id="감자튀김" title="side" data-price="2000"
-                                onclick="option(this.id, this.title, this.dataset.price)"></div>
                         </div>
                         <div id="row">
+                            <div id="감자튀김" title="side" data-price="2000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="콘샐러드" title="side" data-price="2000"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="시즈닝" title="side" data-price="300"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                         </div>
                     </div>
+                    
+                    
 
                     <div id="음료&디저트">
+                        <div id="right_btn" onclick="turn_menu_page_bd(id)">></div>
+                        <div id="left_btn" onclick="turn_menu_page_bd(id)">&#60;</div>
                         <div id="row">
                             <div id="선데" title="b&d" data-price="1900"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
@@ -144,22 +169,29 @@
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="핫초코" title="b&d" data-price="2000"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
-                            <div id="아이스초코" title="b&d" data-price="2000"
-                                onclick="option(this.id, this.title, this.dataset.price)"></div>
                         </div>
                         <div id="row">
+                            <div id="아이스초코" title="b&d" data-price="2000"
+                                onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="컵_아이스크림" title="b&d" data-price="900"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="코카콜라" title="b&d" data-price="1900"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                        <div id="row">
                             <div id="코카콜라_제로" title="b&d" data-price="1900"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                             <div id="스프라이트" title="b&d" data-price="1900"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
-                        </div>
-                        <div id="row">
                             <div id="씨그램" title="b&d" data-price="1900"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
+                        </div>
+                    </div>
+
+                    <div id="음료&디저트2">
+                        <div id="right_btn" onclick="turn_menu_page_bd(id)">></div>
+                        <div id="left_btn" onclick="turn_menu_page_bd(id)">&#60;</div>
+                        <div id="row">
                             <div id="미닛메이드_오렌지" title="b&d" data-price="2700"
                                 onclick="option(this.id, this.title, this.dataset.price)"></div>
                         </div>

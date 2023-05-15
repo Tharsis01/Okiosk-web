@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Home.css">
+    <title>오키오스크</title>
+</head>
+
+<body>
+    <script src="main.js"></script>
+    <div class="main">
+        <div id="kiosk_start_img">
+            <button id="kiosk_start_btn" onclick="start_btn2()"></button>
+        </div>
+        <div id="subpage">
+        <div class="homebtn">
+            <div></div>
+        </div>
+        
+        <div class="title wrapper">
+            <div class="maintitle">OKIOSK</div>
+        </div> 
+
+        <div class="menu wrapper">
+            <div class="menus container" id="menubtn">
+                <button class='skyblue_btn' id="myButton" onclick='afterBtnClick()'>여기를 바라봐 주세요</button>
+                <script>
+                    var myButton = document.getElementById("myButton");
+                    var clickTimeout;
+                
+                    myButton.addEventListener("mouseover", function() {
+                      clickTimeout = setTimeout(function() {
+                        myButton.click();
+                      }, 3000);
+                    });
+                
+                    myButton.addEventListener("mouseout", function() {
+                      clearTimeout(clickTimeout);
+                    });
+
+                    function afterBtnClick()  {
+                        //alert('skyblue_btn 클릭');
+                        location.href="okiosk.html";
+                    };
+                  </script>
+                  <!--<div class="foot wrapper">
+                    <a href="img_copyright.html"><div class="author" >사진 저작권 정보</div></a>
+                </div>-->
+            </div>
+        </div>
+        </div>
+    </div>   
+</body>
+
+</html>

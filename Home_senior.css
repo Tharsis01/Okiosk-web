@@ -8,12 +8,12 @@ body {
 
 .main {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
 
     top: 0;
     left: 0;
     right: 0;
-    /* display: none; */
+
     /*background: rgb(207, 216, 194);*/
 }
 
@@ -50,17 +50,7 @@ body {
     text-align: center;
 }
 
-.kiosk {
-    background-image: url(img/kiosk.png);
-}
 
-.senior {
-    background-image: url(img/senior.png);
-}
-
-.버거킹 {
-    background-image: url(img/home.png);
-}
 
 /*버튼 부분*/
 .menu {
@@ -94,7 +84,7 @@ body {
 .foot {
     width: 100vw;
     height: 15vh;
-    background-color: #ee6d4b;
+    background-color: #000036;
     line-height: 3vh;
 }
 
@@ -135,7 +125,6 @@ body {
     height: 99.95%;
     background: url(img/배경완성최종.png) no-repeat center / cover;
     border-radius: 15px;
-    /* display: none; */
 }
 
 #kiosk_start_btn { 
@@ -144,12 +133,8 @@ body {
     opacity: 0.0; /*불투명도 지정*/
 }
 
-#subpage {
-    display: none;
-}
-
 #kiosk_order {
-    display: block;
+    display: none;
 }
 
 /*상단부분*/
@@ -211,7 +196,7 @@ body {
 #kiosk_menu_table {
     width: 100%;
     height: 69%;
-    display: block;
+    display: none;
     background: #eeeeee;
 }
 
@@ -223,19 +208,18 @@ body {
 }
 
 #row div {
-    width: 23%;
-    height: 15vh;
+    width: 32%;
+    height: 21vh;
     margin-left: 10px;
     margin-right: 10px;
 }
-
 
 /*페이지 넘기는 것, 테이블 밑에 바 구현*/
 /* #nextpage {
     width: 100%;
     height: 3%;
     background: #eeeeee;
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 10px;
 }
@@ -257,7 +241,7 @@ body {
     width: 100%;
     height: 20%;
     background: #eeeeee;
-    display: flex;
+    display: none;
 }
 #order_lsit {
     width: 65%;
@@ -366,8 +350,9 @@ body {
     text-align: center;
     line-height: 5vh;
     opacity: 0.6;
-    border-radius: 8px;
-    display: none;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    display: block;
 }
 #left_btn {
     width: 10%;
@@ -381,8 +366,9 @@ body {
     text-align: center;
     line-height: 5vh;
     opacity: 0.6;
-    border-radius: 8px;
-    display: none;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    display: block;
 }
 
 
@@ -725,26 +711,3 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-
-
-/*버튼*/
-.skyblue_btn {
-    background-color: skyblue;
-    width: 100%;
-    height: 100%;
-    font-size: 500%;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .skyblue_btn:hover {
-    background-color: orange;
-  }
-  
-  .skyblue_btn:focus {
-    box-shadow: 0 0 0 300px purple;
-  }
-  
-  .skyblue_btn:active {
-    background-color: red;
-  }
