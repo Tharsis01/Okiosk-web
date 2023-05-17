@@ -1,0 +1,141 @@
+/*버거&와퍼 부분*/
+#몬스터와퍼 {
+    background: url(img/몬스터와퍼.png) no-repeat center / cover;
+}
+#기네스와퍼 {
+    background: url(img/기네스와퍼.png)  no-repeat center / cover;
+}
+#스태커2와퍼 {
+    background: url(img/스태커2와퍼.png)  no-repeat center / cover;
+}
+#스태커3와퍼 {
+    background: url(img/스태커3와퍼.png)  no-repeat center / cover;
+}
+#갈릭불고기와퍼 {
+    background: url(img/갈릭불고기와퍼.png) no-repeat center / cover;
+}
+#할라피뇨와퍼 {
+    background: url(img/할라피뇨와퍼.png) no-repeat center / cover;
+}
+#치즈와퍼 {
+    background: url(img/치즈와퍼.png) no-repeat center / cover;
+}
+#와퍼 {
+    background: url(img/와퍼.png) no-repeat center / cover;
+}
+#불고기와퍼 {
+    background: url(img/불고기와퍼.png) no-repeat center / cover;
+}
+#통새우와퍼 {
+    background: url(img/통새우와퍼.png) no-repeat center / cover;
+}
+#불고기버거 {
+    background: url(img/불고기버거.png) no-repeat center / cover;
+}
+#새우버거 {
+    background: url(img/새우버거.png) no-repeat center / cover;
+}
+#치킨버거 {
+    background: url(img/치킨버거.png) no-repeat center / cover;
+}
+#치즈버거 {
+    background: url(img/치즈버거.png) no-repeat center / cover;
+}
+
+/*세트 부분*/
+#몬스터와퍼세트 {
+    background: url(img/몬스터와퍼세트.png) no-repeat center / cover;
+}
+#기네스와퍼세트 {
+    background: url(img/기네스와퍼세트.png)  no-repeat center / cover;
+}
+#스태커2와퍼세트 {
+    background: url(img/스태커2와퍼세트.png)  no-repeat center / cover;
+}
+#스태커3와퍼세트 {
+    background: url(img/스태커3와퍼세트.png)  no-repeat center / cover;
+}
+#갈릭불고기와퍼세트 {
+    background: url(img/갈릭불고기와퍼세트.png) no-repeat center / cover;
+}
+#할라피뇨와퍼세트 {
+    background: url(img/할라피뇨와퍼세트.png) no-repeat center / cover;
+}
+#치즈와퍼세트 {
+    background: url(img/치즈와퍼세트.png) no-repeat center / cover;
+}
+#와퍼세트 {
+    background: url(img/와퍼세트.png) no-repeat center / cover;
+}
+#불고기와퍼세트 {
+    background: url(img/불고기와퍼세트.png) no-repeat center / cover;
+}
+#통새우와퍼세트 {
+    background: url(img/통새우와퍼세트.png) no-repeat center / cover;
+}
+#불고기버거세트 {
+    background: url(img/불고기버거세트.png) no-repeat center / cover;
+}
+#새우버거세트 {
+    background: url(img/새우버거세트.png) no-repeat center / cover;
+}
+#치킨버거세트 {
+    background: url(img/치킨버거세트.png) no-repeat center / cover;
+}
+#치즈버거세트 {
+    background: url(img/치즈버거세트.png) no-repeat center / cover;
+}
+
+/*사이드 부분*/
+#너겟킹 {
+    background: url(img/너겟킹.png) no-repeat center / cover;
+}
+#치즈스틱 {
+    background: url(img/치즈스틱.png) no-repeat center / cover;
+}
+#어니언링 {
+    background: url(img/어니언링.png) no-repeat center / cover;
+}
+#감자튀김 {
+    background: url(img/감자튀김.png) no-repeat center / cover;
+}
+#콘샐러드 {
+    background: url(img/콘샐러드.png) no-repeat center / cover;
+}
+#시즈닝 {
+    background: url(img/시즈닝.png) no-repeat center / cover;
+}
+
+
+
+/*음료&디저트 부분*/
+#선데 {
+    background: url(img/선데.png) no-repeat center / cover;
+}
+#아메리카노 {
+    background: url(img/아메리카노.png) no-repeat center / cover;
+}
+#핫초코 {
+    background: url(img/핫초코.png) no-repeat center / cover;
+}
+#아이스초코 {
+    background: url(img/아이스초코.png) no-repeat center / cover;
+}
+#컵_아이스크림 {
+    background: url(img/컵아이스크림.png) no-repeat center / cover;
+}
+#코카콜라 {
+    background: url(img/코카콜라.png) no-repeat center / cover;
+}
+#코카콜라_제로 {
+    background: url(img/코카콜라제로.png) no-repeat center / cover;
+}
+#스프라이트 {
+    background: url(img/스프라이트.png) no-repeat center / cover;
+}
+#씨그램 {
+    background: url(img/씨그램.png) no-repeat center / cover;
+}
+#미닛메이드_오렌지 {
+    background: url(img/미닛메이드오렌지.png) no-repeat center / cover;
+}
