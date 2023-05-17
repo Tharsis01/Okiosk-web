@@ -1,9 +1,6 @@
 var total_num = 0;
 var total_price = 0;
-<<<<<<< HEAD
 var age = 0;
-=======
->>>>>>> 8e3e43f3809613261db9d8b6558a68ea78a8072e
 
 function start_btn() {
     document.getElementById("kiosk_start_img").style.display = 'none';
@@ -23,7 +20,6 @@ function start_btn2() {
     document.getElementById("kiosk_start_img").style.display = 'none';
     document.getElementById("kiosk_start_btn").style.display = 'none';
     document.getElementById("subpage").style.display = 'block';
-<<<<<<< HEAD
     //document.getElementById("homebtn").style.display = 'block';
     //document.getElementById("title wrapper").style.display = 'block';
     //document.getElementById("menu wrapper").style.display = 'block';
@@ -42,11 +38,6 @@ function start_btn2() {
     .catch(function(error) {
       console.log('오류 발생: ' + error.message); // 오류 메시지 출력
     });
-=======
-    document.getElementById("homebtn").style.display = 'block';
-    document.getElementById("title wrapper").style.display = 'block';
-    document.getElementById("menu wrapper").style.display = 'block';
->>>>>>> 8e3e43f3809613261db9d8b6558a68ea78a8072e
 }
 
 window.onload = function () { 
